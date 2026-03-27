@@ -137,7 +137,8 @@ h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color:
   padding: 24px; transition: all 0.3s;
 }
 .outcome-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(61,139,79,0.08); }
-.outcome-icon { font-size: 24px; margin-bottom: 10px; }
+.outcome-icon { width: 32px; height: 32px; margin-bottom: 10px; color: var(--green); }
+.outcome-icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .outcome-card h4 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--green); margin-bottom: 6px; }
 .outcome-card p { font-size: 14px; color: var(--body-text); line-height: 1.6; }
 
@@ -182,7 +183,11 @@ h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color:
 .persona-card.dm { background: var(--blue-bg); border: 1px solid rgba(74,127,181,0.15); }
 .persona-card.user { background: var(--green-bg); border: 1px solid rgba(61,139,79,0.15); }
 .persona-card.su { background: var(--purple-bg); border: 1px solid rgba(123,111,160,0.15); }
-.persona-icon { font-size: 28px; margin-bottom: 12px; }
+.persona-icon { width: 32px; height: 32px; margin-bottom: 12px; }
+.persona-icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.persona-card.dm .persona-icon { color: var(--blue); }
+.persona-card.user .persona-icon { color: var(--green); }
+.persona-card.su .persona-icon { color: var(--purple); }
 .persona-card h3 { font-family: var(--font-display); font-size: 22px; }
 .persona-card p { color: var(--body-text); font-size: 14px; line-height: 1.6; margin-top: 10px; }
 
@@ -326,9 +331,9 @@ footer .we-relate em { color: var(--gold); }
   <h2>Commercial <em>outcomes</em></h2>
   <p class="section-intro">This isn&rsquo;t a marketing exercise &mdash; it&rsquo;s a commercial one. Segment-aware, targeted cold outreach that generates sales inquiries and MQLs.</p>
   <div class="outcome-grid" style="grid-template-columns: repeat(3, 1fr);">
-    <div class="outcome-card reveal"><div class="outcome-icon">&#x1F4E9;</div><h4>More sales inquiries</h4><p>Segment-aware, targeted cold outreach that resonates. The right message to the right person prompts replies and meeting requests. The Prospecting Agent compounds this with AI-personalised 1:1 follow-ups to colder prospects.</p></div>
-    <div class="outcome-card reveal"><div class="outcome-icon">&#x1F4CA;</div><h4>More MQLs for sales</h4><p>More contacts will cross the MQL threshold. Segment-aware campaigns drive deeper engagement &mdash; opens, clicks, page views, form fills. Each interaction accumulates lead score points. More relevant content = faster MQL conversion.</p></div>
-    <div class="outcome-card reveal"><div class="outcome-icon">&#x1F465;</div><h4>More Leads for sales</h4><p>Lead objects auto-create in HubSpot with full segment context. Reps get a prioritised queue of qualified opportunities &mdash; persona, function, vertical, customer status &mdash; all visible on the Lead record.</p></div>
+    <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M21 5H3l9 7 9-7z"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></div><h4>More sales inquiries</h4><p>Segment-aware, targeted cold outreach that resonates. The right message to the right person prompts replies and meeting requests. The Prospecting Agent compounds this with AI-personalised 1:1 follow-ups to colder prospects.</p></div>
+    <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><rect x="5" y="10" width="3" height="10" rx="1"/><rect x="10.5" y="6" width="3" height="14" rx="1"/><rect x="16" y="3" width="3" height="17" rx="1"/></svg></div><h4>More MQLs for sales</h4><p>More contacts will cross the MQL threshold. Segment-aware campaigns drive deeper engagement &mdash; opens, clicks, page views, form fills. Each interaction accumulates lead score points. More relevant content = faster MQL conversion.</p></div>
+    <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="9" r="2.5"/><path d="M21 21v-1.5a3 3 0 0 0-2.5-2.95"/></svg></div><h4>More Leads for sales</h4><p>Lead objects auto-create in HubSpot with full segment context. Reps get a prioritised queue of qualified opportunities &mdash; persona, function, vertical, customer status &mdash; all visible on the Lead record.</p></div>
   </div>
 </div>
 </section>
@@ -340,9 +345,9 @@ footer .we-relate em { color: var(--gold); }
   <p class="section-intro">Independent dimensions that layer on top of each other. Not a hierarchy &mdash; a matrix. Every contact gets tagged across all six.</p>
   <div class="segments-grid">
     <div class="seg-card reveal" data-color="gold"><div class="seg-num">01</div><div class="seg-title">Customer Status</div><div class="seg-question">&ldquo;Have they ever been a customer?&rdquo;</div><div class="seg-values"><span class="seg-tag">Active</span><span class="seg-tag">Lapsed</span><span class="seg-tag">Dormant</span><span class="seg-tag">Never</span></div><div class="seg-crm"><strong>CRM:</strong> Lifecycle Stage + custom dropdown</div><div class="seg-why">Retention vs reactivation vs acquisition</div></div>
-    <div class="seg-card reveal" data-color="teal"><div class="seg-num">02</div><div class="seg-title">HubSpot Relationship</div><div class="seg-question">&ldquo;Are they a HubSpot user?&rdquo;</div><div class="seg-values"><span class="seg-tag">Yes</span><span class="seg-tag">No</span></div><div class="seg-crm"><strong>&#x26A0;</strong> Needs creating &mdash; custom Yes/No</div><div class="seg-why">Platform-aware vs vision-selling content</div></div>
-    <div class="seg-card reveal" data-color="coral"><div class="seg-num">03</div><div class="seg-title">Persona</div><div class="seg-question">&ldquo;What&rsquo;s their relationship to the platform?&rdquo;</div><div class="seg-values"><span class="seg-tag">Decision Maker</span><span class="seg-tag">User</span><span class="seg-tag">Super User</span></div><div class="seg-crm"><strong>&#x26A0;</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Strategic vs practical vs technical</div></div>
-    <div class="seg-card reveal" data-color="blue"><div class="seg-num">04</div><div class="seg-title">Function</div><div class="seg-question">&ldquo;What department?&rdquo;</div><div class="seg-values"><span class="seg-tag">Marketing</span><span class="seg-tag">Sales</span><span class="seg-tag">Sales Ops</span><span class="seg-tag">Service</span><span class="seg-tag">Ops</span><span class="seg-tag">Leadership</span></div><div class="seg-crm"><strong>&#x26A0;</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Content themes by department</div></div>
+    <div class="seg-card reveal" data-color="teal"><div class="seg-num">02</div><div class="seg-title">HubSpot Relationship</div><div class="seg-question">&ldquo;Are they a HubSpot user?&rdquo;</div><div class="seg-values"><span class="seg-tag">Yes</span><span class="seg-tag">No</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom Yes/No</div><div class="seg-why">Platform-aware vs vision-selling content</div></div>
+    <div class="seg-card reveal" data-color="coral"><div class="seg-num">03</div><div class="seg-title">Persona</div><div class="seg-question">&ldquo;What&rsquo;s their relationship to the platform?&rdquo;</div><div class="seg-values"><span class="seg-tag">Decision Maker</span><span class="seg-tag">User</span><span class="seg-tag">Super User</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Strategic vs practical vs technical</div></div>
+    <div class="seg-card reveal" data-color="blue"><div class="seg-num">04</div><div class="seg-title">Function</div><div class="seg-question">&ldquo;What department?&rdquo;</div><div class="seg-values"><span class="seg-tag">Marketing</span><span class="seg-tag">Sales</span><span class="seg-tag">Sales Ops</span><span class="seg-tag">Service</span><span class="seg-tag">Ops</span><span class="seg-tag">Leadership</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Content themes by department</div></div>
     <div class="seg-card reveal" data-color="green"><div class="seg-num">05</div><div class="seg-title">Vertical</div><div class="seg-question">&ldquo;What industry?&rdquo;</div><div class="seg-values"><span class="seg-tag">Travel</span><span class="seg-tag">Events</span><span class="seg-tag">Financial Services</span><span class="seg-tag">Professional Services</span></div><div class="seg-crm"><strong>CRM:</strong> Company &lsquo;Industry&rsquo; &mdash; remap</div><div class="seg-why">Industry-specific case studies</div></div>
     <div class="seg-card reveal" data-color="purple"><div class="seg-num">06</div><div class="seg-title">Sub-Vertical</div><div class="seg-question">&ldquo;What niche?&rdquo;</div><div class="seg-values"><span class="seg-tag">Tour Operators</span><span class="seg-tag">Venue Tech</span><span class="seg-tag">Asset Mgmt</span></div><div class="seg-crm"><strong>CRM:</strong> Company Tags</div><div class="seg-why">Sharpens beyond broad industry</div></div>
   </div>
@@ -354,9 +359,9 @@ footer .we-relate em { color: var(--gold); }
   <h2>Persona <em>definitions</em></h2>
   <p class="section-intro">Persona determines the entire tone and depth of content.</p>
   <div class="persona-cards">
-    <div class="persona-card dm reveal"><div class="persona-icon">&#x1F3AF;</div><h3>Decision Maker</h3><p>Business transformation, growth, ROI, strategic outcomes. They care what it delivers, not how it works.</p></div>
-    <div class="persona-card user reveal"><div class="persona-icon">&#x1F6E0;</div><h3>User</h3><p>Day-to-day operator. Practical advice, tips, best practice they can apply immediately.</p></div>
-    <div class="persona-card su reveal"><div class="persona-icon">&#x26A1;</div><h3>Super User</h3><p>Internal champion. Technical depth &mdash; automation, integrations, portal management, admin best practice.</p></div>
+    <div class="persona-card dm reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Decision Maker</h3><p>Business transformation, growth, ROI, strategic outcomes. They care what it delivers, not how it works.</p></div>
+    <div class="persona-card user reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>User</h3><p>Day-to-day operator. Practical advice, tips, best practice they can apply immediately.</p></div>
+    <div class="persona-card su reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Super User</h3><p>Internal champion. Technical depth &mdash; automation, integrations, portal management, admin best practice.</p></div>
   </div>
 </section>
 
@@ -497,7 +502,7 @@ footer .we-relate em { color: var(--gold); }
         <tr><td class="gantt-label">&nbsp;&nbsp;Bulk enrichment (Breeze + Apollo)</td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td class="gantt-label">&nbsp;&nbsp;Smart Properties + LLM workflows</td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td class="gantt-label">&nbsp;&nbsp;Lead scoring + Prospecting Agent config</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label" style="font-weight:600;">&nbsp;&nbsp;&#x2705; Finalise segmentation build</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--gold);border-radius:3px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label" style="font-weight:600;">&nbsp;&nbsp;Finalise segmentation build</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--gold);border-radius:3px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
         <tr><td class="gantt-label" style="color:var(--teal);font-weight:700;">Phase 2: Pilot</td><td></td><td></td><td></td><td></td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--teal);border-radius:4px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td></tr>
         <tr><td class="gantt-label">&nbsp;&nbsp;Select pilot segment + draft content</td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
