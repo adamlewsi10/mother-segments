@@ -141,6 +141,16 @@ h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color:
 .outcome-icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .outcome-card h4 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--green); margin-bottom: 6px; }
 .outcome-card p { font-size: 14px; color: var(--body-text); line-height: 1.6; }
+.outcome-target {
+  grid-column: 1 / -1; background: var(--white); border: 2px solid var(--green);
+  border-radius: 14px; padding: 18px 24px; text-align: center;
+}
+.outcome-target .target-number {
+  font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--green);
+}
+.outcome-target .target-label {
+  font-size: 14px; color: var(--body-text); margin-top: 2px;
+}
 
 /* ─── TOOLS ─── */
 .tools-section { background: var(--light-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -332,7 +342,8 @@ footer .we-relate em { color: var(--gold); }
   <p class="section-intro">This isn&rsquo;t a marketing exercise &mdash; it&rsquo;s a commercial one. Segment-aware, targeted outreach that generates real pipeline.</p>
   <div class="outcome-grid" style="grid-template-columns: repeat(2, 1fr);">
     <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M21 5H3l9 7 9-7z"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></div><h4>More new sales inquiries</h4><p>Segment-aware, targeted cold outreach that resonates. The right message to the right person prompts replies and meeting requests. The Prospecting Agent compounds this with AI-personalised 1:1 follow-ups to colder prospects.</p></div>
-    <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><rect x="5" y="10" width="3" height="10" rx="1"/><rect x="10.5" y="6" width="3" height="14" rx="1"/><rect x="16" y="3" width="3" height="17" rx="1"/></svg></div><h4>50+ leads per month &amp; more MQLs</h4><p>More contacts will cross the MQL threshold. Segment-aware campaigns drive deeper engagement &mdash; opens, clicks, page views, form fills. Each interaction accumulates lead score points. More relevant content = faster MQL conversion. Target: 50+ qualified leads per month flowing to sales.</p></div>
+    <div class="outcome-card reveal"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><rect x="5" y="10" width="3" height="10" rx="1"/><rect x="10.5" y="6" width="3" height="14" rx="1"/><rect x="16" y="3" width="3" height="17" rx="1"/></svg></div><h4>More MQLs over the threshold</h4><p>Segment-aware campaigns drive deeper engagement &mdash; opens, clicks, page views, form fills. Each interaction accumulates lead score points. More relevant content = faster MQL conversion. MQLs auto-create as Lead objects in HubSpot, giving reps a prioritised queue.</p></div>
+    <div class="outcome-target reveal"><div class="target-number">50+ leads per month</div><div class="target-label">Combined target from both channels &mdash; new sales inquiries from cold outreach and MQLs crossing the threshold into the Lead object</div></div>
   </div>
 </div>
 </section>
