@@ -189,16 +189,18 @@ h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color:
 .seg-why { font-size: 13px; color: var(--body-text); margin-top: 10px; line-height: 1.5; }
 
 /* ─── PERSONAS ─── */
-.persona-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.persona-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .persona-card { border-radius: 14px; padding: 28px; }
 .persona-card.dm { background: var(--blue-bg); border: 1px solid rgba(74,127,181,0.15); }
 .persona-card.user { background: var(--green-bg); border: 1px solid rgba(61,139,79,0.15); }
 .persona-card.su { background: var(--purple-bg); border: 1px solid rgba(123,111,160,0.15); }
+.persona-card.inf { background: var(--coral-bg); border: 1px solid rgba(196,101,74,0.15); }
 .persona-icon { width: 32px; height: 32px; margin-bottom: 12px; }
 .persona-icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .persona-card.dm .persona-icon { color: var(--blue); }
 .persona-card.user .persona-icon { color: var(--green); }
 .persona-card.su .persona-icon { color: var(--purple); }
+.persona-card.inf .persona-icon { color: var(--coral); }
 .persona-card h3 { font-family: var(--font-display); font-size: 22px; }
 .persona-card p { color: var(--body-text); font-size: 14px; line-height: 1.6; margin-top: 10px; }
 
@@ -334,7 +336,7 @@ footer .we-relate em { color: var(--gold); }
 <header class="hero">
   <div class="hero-badge">BBD Boom &middot; Marketing Growth Plan</div>
   <h1>Mother<br><em>Segments</em></h1>
-  <p class="hero-sub">Every great chef knows the five mother sauces. Every great marketer needs six mother segments. The foundational building blocks for AI-personalised, commercially-driven CRM marketing.</p>
+  <p class="hero-sub">Every great chef knows the five mother sauces. Every great marketer needs seven mother segments. The foundational building blocks for AI-personalised, commercially-driven CRM marketing.</p>
   <div class="hero-cta">
     <a href="#origin" class="cta-primary">Discover the concept</a>
     <a href="#outcomes" class="cta-ghost">See the outcomes &rarr;</a>
@@ -349,7 +351,7 @@ footer .we-relate em { color: var(--gold); }
       <div class="section-label">The Origin Story</div>
       <h2>In French cooking, everything starts with <em>five mother sauces</em></h2>
       <p>B&eacute;chamel. Velout&eacute;. Espagnole. Hollandaise. Tomate. Master these five, and you can create any sauce in the world. They&rsquo;re the foundation everything else is built on.</p>
-      <p>We borrowed the idea. In CRM marketing, there are six foundational dimensions that every contact should be tagged against. Get these right, and you can create any campaign, any audience, any personalised message &mdash; with precision.</p>
+      <p>We borrowed the idea. In CRM marketing, there are seven foundational dimensions that every contact should be tagged against. Get these right, and you can create any campaign, any audience, any personalised message &mdash; with precision.</p>
       <p style="color: var(--gold); font-style: italic; font-family: var(--font-display); font-size: 20px; margin-top: 20px;">We call them Mother Segments.</p>
     </div>
     <div>
@@ -360,6 +362,7 @@ footer .we-relate em { color: var(--gold); }
         <div class="sauce-item"><div class="sauce-name">Hollandaise</div><div class="sauce-desc">The flavour &rarr; Function</div></div>
         <div class="sauce-item"><div class="sauce-name">Tomate</div><div class="sauce-desc">The colour &rarr; Vertical</div></div>
         <div class="sauce-item"><div class="sauce-name">The Sixth</div><div class="sauce-desc">Our addition &rarr; Sub-Vertical</div></div>
+        <div class="sauce-item"><div class="sauce-name">The Seventh</div><div class="sauce-desc">The scale &rarr; Firm Size</div></div>
       </div>
     </div>
   </div>
@@ -383,15 +386,16 @@ footer .we-relate em { color: var(--gold); }
 <!-- SEGMENTS -->
 <section id="segments">
   <div class="section-label">The Foundation</div>
-  <h2>Six <em>mother segments</em></h2>
-  <p class="section-intro">Independent dimensions that layer on top of each other. Not a hierarchy &mdash; a matrix. Every contact gets tagged across all six.</p>
+  <h2>Seven <em>mother segments</em></h2>
+  <p class="section-intro">Independent dimensions that layer on top of each other. Not a hierarchy &mdash; a matrix. Every contact gets tagged across all seven.</p>
   <div class="segments-grid">
     <div class="seg-card reveal" data-color="gold"><div class="seg-num">01</div><div class="seg-title">Customer Status</div><div class="seg-question">&ldquo;Have they ever been a customer?&rdquo;</div><div class="seg-values"><span class="seg-tag">Active</span><span class="seg-tag">Lapsed</span><span class="seg-tag">Dormant</span><span class="seg-tag">Never</span></div><div class="seg-crm"><strong>CRM:</strong> Lifecycle Stage + custom dropdown</div><div class="seg-why">Retention vs reactivation vs acquisition</div></div>
     <div class="seg-card reveal" data-color="teal"><div class="seg-num">02</div><div class="seg-title">HubSpot Relationship</div><div class="seg-question">&ldquo;Are they a HubSpot user?&rdquo;</div><div class="seg-values"><span class="seg-tag">Yes</span><span class="seg-tag">No</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom Yes/No</div><div class="seg-why">Platform-aware vs vision-selling content</div></div>
-    <div class="seg-card reveal" data-color="coral"><div class="seg-num">03</div><div class="seg-title">Persona</div><div class="seg-question">&ldquo;What&rsquo;s their relationship to the platform?&rdquo;</div><div class="seg-values"><span class="seg-tag">Decision Maker</span><span class="seg-tag">User</span><span class="seg-tag">Super User</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Strategic vs practical vs technical</div></div>
+    <div class="seg-card reveal" data-color="coral"><div class="seg-num">03</div><div class="seg-title">Persona</div><div class="seg-question">&ldquo;What&rsquo;s their relationship to the platform?&rdquo;</div><div class="seg-values"><span class="seg-tag">Decision Maker</span><span class="seg-tag">User</span><span class="seg-tag">Super User</span><span class="seg-tag">Influencer</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Strategic vs practical vs technical vs influential</div></div>
     <div class="seg-card reveal" data-color="blue"><div class="seg-num">04</div><div class="seg-title">Function</div><div class="seg-question">&ldquo;What department?&rdquo;</div><div class="seg-values"><span class="seg-tag">Marketing</span><span class="seg-tag">Sales</span><span class="seg-tag">Sales Ops</span><span class="seg-tag">Service</span><span class="seg-tag">Ops</span><span class="seg-tag">Leadership</span></div><div class="seg-crm"><strong style="color:var(--coral);">*</strong> Needs creating &mdash; custom dropdown</div><div class="seg-why">Content themes by department</div></div>
     <div class="seg-card reveal" data-color="green"><div class="seg-num">05</div><div class="seg-title">Vertical</div><div class="seg-question">&ldquo;What industry?&rdquo;</div><div class="seg-values"><span class="seg-tag">Travel</span><span class="seg-tag">Events</span><span class="seg-tag">Financial Services</span><span class="seg-tag">Professional Services</span></div><div class="seg-crm"><strong>CRM:</strong> Company &lsquo;Industry&rsquo; &mdash; remap</div><div class="seg-why">Industry-specific case studies</div></div>
     <div class="seg-card reveal" data-color="purple"><div class="seg-num">06</div><div class="seg-title">Sub-Vertical</div><div class="seg-question">&ldquo;What niche?&rdquo;</div><div class="seg-values"><span class="seg-tag">Tour Operators</span><span class="seg-tag">Venue Tech</span><span class="seg-tag">Asset Mgmt</span></div><div class="seg-crm"><strong>CRM:</strong> Company Tags</div><div class="seg-why">Sharpens beyond broad industry</div></div>
+    <div class="seg-card reveal" data-color="gold"><div class="seg-num">07</div><div class="seg-title">Firm Size</div><div class="seg-question">&ldquo;How big is the organisation?&rdquo;</div><div class="seg-values"><span class="seg-tag">Enterprise</span><span class="seg-tag">Mid Market</span><span class="seg-tag">SME</span></div><div class="seg-crm"><strong>CRM:</strong> Company &lsquo;Number of Employees&rsquo; &rarr; tiered dropdown</div><div class="seg-why">Budget, buying process, and content complexity differ by size</div></div>
   </div>
 </section>
 
@@ -404,6 +408,7 @@ footer .we-relate em { color: var(--gold); }
     <div class="persona-card dm reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Decision Maker</h3><p>Business transformation, growth, ROI, strategic outcomes. They care what it delivers, not how it works.</p></div>
     <div class="persona-card user reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>User</h3><p>Day-to-day operator. Practical advice, tips, best practice they can apply immediately.</p></div>
     <div class="persona-card su reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Super User</h3><p>Internal champion. Technical depth &mdash; automation, integrations, portal management, admin best practice.</p></div>
+    <div class="persona-card inf reveal"><div class="persona-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><h3>Influencer</h3><p>Not the decision maker, but shapes the decision. Evaluates vendors, builds the business case, and champions internally. Needs proof points and peer validation.</p></div>
   </div>
 </section>
 
@@ -562,16 +567,29 @@ footer .we-relate em { color: var(--gold); }
       <h3>Pilot &mdash; Prove It Works</h3>
       <svg class="phase-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <p class="phase-desc">Controlled pilot on lapsed Decision Makers. Measure: replies, meetings, MQLs, Leads.</p>
+    <p class="phase-desc">Three focused streams: convert Hot Prospects, drive Warm-to-Hot MQLs, and reactivate lapsed &amp; dormant clients.</p>
     <div class="phase-content">
       <div class="step-grid">
-        <div class="step-row"><span class="step-num">1</span><span class="step-action">Select pilot: Lapsed Customers + Decision Makers</span><span class="step-tool">HubSpot Active List</span><span class="step-outcome">~50&ndash;100 test contacts</span></div>
-        <div class="step-row"><span class="step-num">2</span><span class="step-action">Draft personalised emails via AI-Powered Email</span><span class="step-tool">HubSpot AI-Powered Email</span><span class="step-outcome">Segment-specific copy</span></div>
-        <div class="step-row"><span class="step-num">3</span><span class="step-action">A/B test: generic vs segment-personalised</span><span class="step-tool">HubSpot Email A/B testing</span><span class="step-outcome">Measurable lift</span></div>
-        <div class="step-row"><span class="step-num">4</span><span class="step-action">Enrol Decision Makers into Prospecting Agent</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI 1:1 outreach</span></div>
-        <div class="step-row"><span class="step-num">5</span><span class="step-action">Monitor lead score accumulation</span><span class="step-tool">HubSpot Lead Scoring</span><span class="step-outcome">Track MQL conversions</span></div>
-        <div class="step-row"><span class="step-num">6</span><span class="step-action">Deploy Personalisation Agent for website CTAs</span><span class="step-tool">Breeze Personalisation Agent</span><span class="step-outcome">Website converts by segment</span></div>
-        <div class="step-row"><span class="step-num">7</span><span class="step-action">Measure commercial outcomes</span><span class="step-tool">HubSpot Campaign Analytics</span><span class="step-outcome">Data-backed case for scale</span></div>
+        <div class="step-row" style="background: var(--coral-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--coral);">Stream A &mdash; Hot Prospects</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">1</span><span class="step-action">Build active list: Hot lead score + segment-aligned contacts</span><span class="step-tool">HubSpot Active List + Lead Scoring</span><span class="step-outcome">Priority prospect pool</span></div>
+        <div class="step-row"><span class="step-num">2</span><span class="step-action">Enrol Hot Prospects into Prospecting Agent with persona-matched selling profiles</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI 1:1 outreach to hottest leads</span></div>
+        <div class="step-row"><span class="step-num">3</span><span class="step-action">Sales team alerted &mdash; act within 24 hrs on auto-created Leads</span><span class="step-tool">HubSpot Workflows &rarr; Lead creation</span><span class="step-outcome">Fast response on high-intent</span></div>
+
+        <div class="step-row" style="background: var(--gold-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--gold);">Stream B &mdash; Driving MQLs (Warm &rarr; Hot)</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">4</span><span class="step-action">Build active list: Warm lead score contacts with good segment fit</span><span class="step-tool">HubSpot Active List</span><span class="step-outcome">Nurture-ready audience</span></div>
+        <div class="step-row"><span class="step-num">5</span><span class="step-action">Draft segment-aware nurture sequences via AI-Powered Email</span><span class="step-tool">HubSpot AI-Powered Email</span><span class="step-outcome">Personalised drip campaigns</span></div>
+        <div class="step-row"><span class="step-num">6</span><span class="step-action">Deploy Personalisation Agent &mdash; website CTAs matched to persona &amp; vertical</span><span class="step-tool">Breeze Personalisation Agent</span><span class="step-outcome">Website converts visitors into MQLs</span></div>
+        <div class="step-row"><span class="step-num">7</span><span class="step-action">A/B test: generic vs segment-personalised content</span><span class="step-tool">HubSpot Email A/B testing</span><span class="step-outcome">Measurable engagement lift</span></div>
+        <div class="step-row"><span class="step-num">8</span><span class="step-action">Monitor lead score accumulation &mdash; track Warm contacts crossing MQL threshold</span><span class="step-tool">HubSpot Lead Scoring</span><span class="step-outcome">Pipeline of newly Hot leads</span></div>
+
+        <div class="step-row" style="background: var(--teal-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--teal);">Stream C &mdash; Reactivation (Lapsed &amp; Dormant)</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">9</span><span class="step-action">Build active lists: Lapsed Customers + Dormant Customers by vertical</span><span class="step-tool">HubSpot Active Lists</span><span class="step-outcome">Reactivation target pools</span></div>
+        <div class="step-row"><span class="step-num">10</span><span class="step-action">Draft &ldquo;what&rsquo;s changed&rdquo; win-back campaigns &mdash; AI features, new capabilities, ROI proof</span><span class="step-tool">HubSpot AI-Powered Email</span><span class="step-outcome">Relevant re-engagement content</span></div>
+        <div class="step-row"><span class="step-num">11</span><span class="step-action">Enrol lapsed Decision Makers &amp; Influencers into Prospecting Agent</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI-personalised win-back outreach</span></div>
+        <div class="step-row"><span class="step-num">12</span><span class="step-action">Track reactivation: replies, meetings booked, re-engaged accounts</span><span class="step-tool">HubSpot Campaign Analytics</span><span class="step-outcome">Reactivated pipeline</span></div>
+
+        <div class="step-row" style="background: var(--green-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--green);">Measure &amp; Report</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">13</span><span class="step-action">Measure commercial outcomes across all three streams</span><span class="step-tool">HubSpot Campaign Analytics</span><span class="step-outcome">Data-backed case for scale</span></div>
       </div>
     </div>
   </div>
@@ -628,9 +646,9 @@ footer .we-relate em { color: var(--gold); }
         <tr><td class="gantt-label" style="font-weight:600;">&nbsp;&nbsp;Finalise segmentation build</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--gold);border-radius:3px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
         <tr><td class="gantt-label" style="color:var(--teal);font-weight:700;">Phase 2: Pilot</td><td></td><td></td><td></td><td></td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--teal);border-radius:4px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Select pilot segment + draft content</td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Launch A/B test + Prospecting Agent</td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Measure + report</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Stream A: Hot Prospects outreach</td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Stream B: Warm &rarr; Hot MQL nurture</td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Stream C: Lapsed/dormant reactivation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td></tr>
 
         <tr><td class="gantt-label" style="color:var(--green);font-weight:700;">Phase 3: Scale</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--green);border-radius:4px;opacity:0.7;"></div></td></tr>
         <tr><td class="gantt-label">&nbsp;&nbsp;Roll out all segments + AI email</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--green);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td></tr>
