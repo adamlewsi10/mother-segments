@@ -515,17 +515,27 @@ footer .we-relate em { color: var(--gold); }
 <div class="section-inner">
   <div class="section-label">The Toolkit</div>
   <h2>HubSpot tools that <em>power this</em></h2>
-  <p class="section-intro">Everything runs on tools within HubSpot, supplemented by Apollo.io for enrichment.</p>
-  <div class="tools-grid">
-    <div class="tool-card reveal"><div class="tool-name">Breeze Prospecting Agent</div><div class="tool-what">Researches prospects, monitors buying signals, drafts personalised outreach. Uses selling profiles for different personas and markets.</div><div class="tool-how">Core sales engine. Configure per segment, pilot on lapsed Decision Makers, scale across all segments.</div></div>
-    <div class="tool-card reveal"><div class="tool-name">AI-Powered Email</div><div class="tool-what">Generates personalised email copy using CRM data &mdash; subject lines, body, follow-ups per contact record.</div><div class="tool-how">Pilot: segment-aware campaigns. Scale: 1:1 personalisation driving engagement and MQLs.</div></div>
+  <p class="section-intro">Three layers of tooling &mdash; from data quality through automation to outreach.</p>
+
+  <h3 style="color: var(--blue); margin-bottom: 14px; margin-top: 8px;">Layer 1 &mdash; Enrichment &amp; Data Quality</h3>
+  <div class="tools-grid" style="margin-bottom: 32px;">
     <div class="tool-card reveal"><div class="tool-name">Breeze Intelligence</div><div class="tool-what">Auto-enriches contacts and companies with 40+ data points. Free for standard fields on Starter+.</div><div class="tool-how">Populates raw data for Persona, Function, and Vertical segments.</div></div>
     <div class="tool-card reveal"><div class="tool-name">Data Agent + Smart Properties</div><div class="tool-what">AI-researched custom properties. Ask a question, Data Agent fills the answer from CRM + web data.</div><div class="tool-how">Auto-fills Persona and Function. Runs via workflow or bulk.</div></div>
     <div class="tool-card reveal"><div class="tool-name">Lead Scoring</div><div class="tool-what">Scores contacts on fit (properties) + engagement (behaviour). Predictive model learns from historical data.</div><div class="tool-how">Mother Segments feed &lsquo;fit&rsquo;. MQL threshold triggers Lead creation.</div></div>
+    <div class="tool-card reveal"><div class="tool-name">Apollo.io</div><div class="tool-what">External enrichment: job titles, departments, seniority levels beyond HubSpot&rsquo;s dataset.</div><div class="tool-how">Supplements Breeze for contacts where HubSpot data is sparse. Bulk via API.</div></div>
+  </div>
+
+  <h3 style="color: var(--teal); margin-bottom: 14px;">Layer 2 &mdash; Automation</h3>
+  <div class="tools-grid" style="margin-bottom: 32px;">
     <div class="tool-card reveal"><div class="tool-name">LLMs in Workflows</div><div class="tool-what">Custom coded workflow actions using LLMs to classify, route, and enrich contacts. AI-powered branching and segmentation logic at scale.</div><div class="tool-how">Auto-classify contacts into Persona and Function. Intelligent routing without manual rules.</div></div>
     <div class="tool-card reveal"><div class="tool-name">Custom Coded Workflows</div><div class="tool-what">JavaScript/Python actions inside HubSpot workflows. Call external APIs, run complex logic, transform data.</div><div class="tool-how">Apollo enrichment triggers, segment population, multi-step classification pipelines.</div></div>
+  </div>
+
+  <h3 style="color: var(--green); margin-bottom: 14px;">Layer 3 &mdash; Outreach</h3>
+  <div class="tools-grid">
+    <div class="tool-card reveal"><div class="tool-name">Breeze Prospecting Agent</div><div class="tool-what">Researches prospects, monitors buying signals, drafts personalised outreach. Uses selling profiles for different personas and markets.</div><div class="tool-how">Core sales engine. Configure per segment, pilot on target audiences, scale across all segments.</div></div>
+    <div class="tool-card reveal"><div class="tool-name">AI-Powered Email</div><div class="tool-what">Generates personalised email copy using CRM data &mdash; subject lines, body, follow-ups per contact record.</div><div class="tool-how">Pilot: segment-aware campaigns. Scale: 1:1 personalisation driving engagement and MQLs.</div></div>
     <div class="tool-card reveal"><div class="tool-name">Personalisation Agent</div><div class="tool-what">Creates tailored website CTAs and content experiences for audience segments.</div><div class="tool-how">Website adapts to visitor&rsquo;s persona and vertical, converting traffic into form fills.</div></div>
-    <div class="tool-card reveal"><div class="tool-name">Apollo.io</div><div class="tool-what">External enrichment: job titles, departments, seniority levels beyond HubSpot&rsquo;s dataset.</div><div class="tool-how">Supplements Breeze for contacts where HubSpot data is sparse. Bulk via API.</div></div>
   </div>
 </div>
 </section>
@@ -542,21 +552,30 @@ footer .we-relate em { color: var(--gold); }
       <h3>Segmentation Foundations</h3>
       <svg class="phase-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <p class="phase-desc">Create CRM properties, enrich data, configure lead scoring, the Prospecting Agent, and finalise the segmentation build.</p>
+    <p class="phase-desc">Audit what exists, build the segment schema, enrich data, and create an AI mechanism for ongoing data quality.</p>
     <div class="phase-content">
       <div class="step-grid">
-        <div class="step-row"><span class="step-num">1</span><span class="step-action">Create contact properties: Persona, Function, HubSpot User</span><span class="step-tool">HubSpot Settings &rarr; Properties</span><span class="step-outcome">CRM schema ready</span></div>
-        <div class="step-row"><span class="step-num">2</span><span class="step-action">Create Customer Status property</span><span class="step-tool">HubSpot Settings &rarr; Properties</span><span class="step-outcome">Lifecycle granularity</span></div>
-        <div class="step-row"><span class="step-num">3</span><span class="step-action">Audit Industry property; remap to BBD verticals</span><span class="step-tool">HubSpot company properties</span><span class="step-outcome">Verticals usable for lists</span></div>
-        <div class="step-row"><span class="step-num">4</span><span class="step-action">Define sub-verticals via Company Tags</span><span class="step-tool">HubSpot Company Tags</span><span class="step-outcome">Sub-vertical framework</span></div>
-        <div class="step-row"><span class="step-num">5</span><span class="step-action">Bulk enrich contacts with job title, role, industry</span><span class="step-tool">Breeze Intelligence + Apollo.io</span><span class="step-outcome">Raw data for segments</span></div>
-        <div class="step-row"><span class="step-num">6</span><span class="step-action">Smart Properties for Persona &amp; Function via Data Agent</span><span class="step-tool">Data Agent + LLM classification</span><span class="step-outcome">AI auto-fill</span></div>
-        <div class="step-row"><span class="step-num">7</span><span class="step-action">Build custom coded workflows for AI classification</span><span class="step-tool">Custom Coded Actions + LLMs</span><span class="step-outcome">Intelligent auto-segmentation</span></div>
-        <div class="step-row"><span class="step-num">8</span><span class="step-action">Build segment-based active lists</span><span class="step-tool">HubSpot Active Lists</span><span class="step-outcome">Targetable audiences</span></div>
-        <div class="step-row"><span class="step-num">9</span><span class="step-action">Configure lead scoring weighted by segments</span><span class="step-tool">HubSpot Lead Scoring</span><span class="step-outcome">MQL reflects segment fit</span></div>
-        <div class="step-row"><span class="step-num">10</span><span class="step-action">Auto-create Lead objects on MQL threshold</span><span class="step-tool">HubSpot Workflows</span><span class="step-outcome">Sales get MQL queue</span></div>
-        <div class="step-row"><span class="step-num">11</span><span class="step-action">Configure Prospecting Agent selling profiles</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI knows each persona</span></div>
-        <div class="step-row" style="background: var(--gold-bg); border-radius: 8px;"><span class="step-num">12</span><span class="step-action"><strong>Finalise segmentation build</strong> &mdash; QA all properties, validate enrichment accuracy, review list populations, sign off</span><span class="step-tool">Manual review + HubSpot reports</span><span class="step-outcome">Segmentation live and verified</span></div>
+        <div class="step-row" style="background: var(--gold-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--gold);">CRM Audit</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">1</span><span class="step-action">Audit existing CRM properties &mdash; what already exists across contacts and companies</span><span class="step-tool">HubSpot Settings &rarr; Properties</span><span class="step-outcome">Full property inventory</span></div>
+        <div class="step-row"><span class="step-num">2</span><span class="step-action">Identify which key segment properties already exist and assess data quality</span><span class="step-tool">HubSpot Reports + Exports</span><span class="step-outcome">Gap &amp; quality baseline</span></div>
+        <div class="step-row"><span class="step-num">3</span><span class="step-action">Determine what needs to be created, updated, merged, or archived</span><span class="step-tool">HubSpot Settings &rarr; Properties</span><span class="step-outcome">Clean-up &amp; build plan</span></div>
+
+        <div class="step-row" style="background: var(--blue-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--blue);">Build Segment Schema</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">4</span><span class="step-action">Create/update contact properties: Persona, Function, HubSpot User, Customer Status</span><span class="step-tool">HubSpot Settings &rarr; Properties</span><span class="step-outcome">CRM schema ready</span></div>
+        <div class="step-row"><span class="step-num">5</span><span class="step-action">Audit Industry property; remap to BBD verticals</span><span class="step-tool">HubSpot company properties</span><span class="step-outcome">Verticals usable for lists</span></div>
+        <div class="step-row"><span class="step-num">6</span><span class="step-action">Define sub-verticals via Company Tags and Firm Size tiers</span><span class="step-tool">HubSpot Company Tags + Properties</span><span class="step-outcome">All seven segments defined</span></div>
+
+        <div class="step-row" style="background: var(--teal-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--teal);">Enrichment &amp; AI Classification</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">7</span><span class="step-action">Bulk enrich contacts with job title, role, industry</span><span class="step-tool">Breeze Intelligence + Apollo.io</span><span class="step-outcome">Raw data for segments</span></div>
+        <div class="step-row"><span class="step-num">8</span><span class="step-action">Smart Properties for Persona &amp; Function via Data Agent</span><span class="step-tool">Data Agent + LLM classification</span><span class="step-outcome">AI auto-fill</span></div>
+        <div class="step-row"><span class="step-num">9</span><span class="step-action">Build AI-powered workflows for ongoing enrichment, validation, and auto-classification</span><span class="step-tool">Custom Coded Actions + LLMs</span><span class="step-outcome">Continuous data quality</span></div>
+
+        <div class="step-row" style="background: var(--green-bg); border-radius: 8px;"><span class="step-num"></span><span class="step-action"><strong style="color:var(--green);">Scoring, Lists &amp; Data Quality Dashboard</strong></span><span class="step-tool"></span><span class="step-outcome"></span></div>
+        <div class="step-row"><span class="step-num">10</span><span class="step-action">Build segment-based active lists</span><span class="step-tool">HubSpot Active Lists</span><span class="step-outcome">Targetable audiences</span></div>
+        <div class="step-row"><span class="step-num">11</span><span class="step-action">Configure lead scoring weighted by segments</span><span class="step-tool">HubSpot Lead Scoring</span><span class="step-outcome">MQL reflects segment fit</span></div>
+        <div class="step-row"><span class="step-num">12</span><span class="step-action">Auto-create Lead objects on MQL threshold</span><span class="step-tool">HubSpot Workflows</span><span class="step-outcome">Sales get MQL queue</span></div>
+        <div class="step-row"><span class="step-num">13</span><span class="step-action">Build data quality dashboard &mdash; segment coverage, fill rates, classification accuracy, gaps</span><span class="step-tool">HubSpot Custom Reports</span><span class="step-outcome">Visual health check on segmentation</span></div>
+        <div class="step-row" style="background: var(--gold-bg); border-radius: 8px;"><span class="step-num">14</span><span class="step-action"><strong>Finalise segmentation build</strong> &mdash; QA all properties, validate enrichment accuracy, review list populations, sign off</span><span class="step-tool">Manual review + Dashboard</span><span class="step-outcome">Segmentation live and verified</span></div>
       </div>
     </div>
   </div>
@@ -572,11 +591,12 @@ footer .we-relate em { color: var(--gold); }
       <div class="step-grid">
         <div class="step-row"><span class="step-num">1</span><span class="step-action">Pick 2&ndash;3 pilot segments to test against (e.g. Hot Prospects, Warm nurture, Lapsed reactivation)</span><span class="step-tool">HubSpot Active Lists</span><span class="step-outcome">Focused test audiences</span></div>
         <div class="step-row"><span class="step-num">2</span><span class="step-action">Build segment-based active lists for each pilot audience</span><span class="step-tool">HubSpot Active Lists</span><span class="step-outcome">Targetable cohorts</span></div>
-        <div class="step-row"><span class="step-num">3</span><span class="step-action">Draft and send segment-aware campaigns using AI-Powered Email</span><span class="step-tool">HubSpot AI-Powered Email</span><span class="step-outcome">Personalised outreach at scale</span></div>
-        <div class="step-row"><span class="step-num">4</span><span class="step-action">Enrol contacts into Prospecting Agent with persona-matched selling profiles</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI 1:1 follow-up sequences</span></div>
-        <div class="step-row"><span class="step-num">5</span><span class="step-action">Sync pilot lists to ad platforms and run segment-matched retargeting ads</span><span class="step-tool">HubSpot Ads (Google, LinkedIn, Meta)</span><span class="step-outcome">Multi-channel reinforcement</span></div>
-        <div class="step-row"><span class="step-num">6</span><span class="step-action">Monitor engagement: opens, clicks, replies, lead score movement, MQL conversions</span><span class="step-tool">HubSpot Lead Scoring + Analytics</span><span class="step-outcome">Learn what works per segment</span></div>
-        <div class="step-row"><span class="step-num">7</span><span class="step-action">Review results &mdash; which segments responded, which channels drove leads, what to double down on</span><span class="step-tool">HubSpot Campaign Analytics</span><span class="step-outcome">Data-backed playbook for scale</span></div>
+        <div class="step-row"><span class="step-num">3</span><span class="step-action">Configure Prospecting Agent selling profiles per persona and vertical</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI knows each segment</span></div>
+        <div class="step-row"><span class="step-num">4</span><span class="step-action">Draft and send segment-aware campaigns using AI-Powered Email</span><span class="step-tool">HubSpot AI-Powered Email</span><span class="step-outcome">Personalised outreach at scale</span></div>
+        <div class="step-row"><span class="step-num">5</span><span class="step-action">Enrol contacts into Prospecting Agent with persona-matched selling profiles</span><span class="step-tool">Breeze Prospecting Agent</span><span class="step-outcome">AI 1:1 follow-up sequences</span></div>
+        <div class="step-row"><span class="step-num">6</span><span class="step-action">Sync pilot lists to ad platforms and run segment-matched retargeting ads</span><span class="step-tool">HubSpot Ads (Google, LinkedIn, Meta)</span><span class="step-outcome">Multi-channel reinforcement</span></div>
+        <div class="step-row"><span class="step-num">7</span><span class="step-action">Monitor engagement: opens, clicks, replies, lead score movement, MQL conversions</span><span class="step-tool">HubSpot Lead Scoring + Analytics</span><span class="step-outcome">Learn what works per segment</span></div>
+        <div class="step-row"><span class="step-num">8</span><span class="step-action">Review results &mdash; which segments responded, which channels drove leads, what to double down on</span><span class="step-tool">HubSpot Campaign Analytics</span><span class="step-outcome">Data-backed playbook for scale</span></div>
       </div>
     </div>
   </div>
@@ -606,7 +626,7 @@ footer .we-relate em { color: var(--gold); }
 <section id="timeline">
   <div class="section-label">Timeline</div>
   <h2>Indicative <em>Gantt chart</em></h2>
-  <p class="section-intro">Assuming a May 2026 start. 12 weeks to full AI-personalised marketing. Timings are indicative and will be refined during Phase 1 scoping.</p>
+  <p class="section-intro">Assuming a June 2026 start. 8 weeks to full AI-personalised marketing. Timings are indicative and will be refined during Phase 1 scoping.</p>
 
   <div class="gantt-container">
     <table class="gantt">
@@ -615,32 +635,28 @@ footer .we-relate em { color: var(--gold); }
           <th></th>
           <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
           <th>W5</th><th>W6</th><th>W7</th><th>W8</th>
-          <th>W9</th><th>W10</th><th>W11</th><th>W12</th>
         </tr>
         <tr style="font-size:10px;color:var(--muted);border:none;">
           <td></td>
-          <td colspan="4" style="text-align:center;padding:2px;border:none;">May 2026</td>
           <td colspan="4" style="text-align:center;padding:2px;border:none;">June 2026</td>
           <td colspan="4" style="text-align:center;padding:2px;border:none;">July 2026</td>
         </tr>
       </thead>
       <tbody>
-        <tr><td class="gantt-label" style="color:var(--blue);font-weight:700;">Phase 1: Segmentation Foundations</td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--blue);border-radius:4px;opacity:0.15;"></div><div style="position:absolute;inset:6px 4px;background:var(--blue);border-radius:4px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Create CRM properties</td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Bulk enrichment (Breeze + Apollo)</td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Smart Properties + LLM workflows</td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Lead scoring + Prospecting Agent config</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label" style="font-weight:600;">&nbsp;&nbsp;Finalise segmentation build</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--gold);border-radius:3px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label" style="color:var(--blue);font-weight:700;">Phase 1: Segmentation Foundations</td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--blue);border-radius:4px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;CRM audit + gap analysis</td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Build segment schema + properties</td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Enrichment + AI classification</td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Lead scoring + lists + data quality dashboard</td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--blue);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label" style="font-weight:600;">&nbsp;&nbsp;Finalise segmentation build</td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--gold);border-radius:3px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td></tr>
 
-        <tr><td class="gantt-label" style="color:var(--teal);font-weight:700;">Phase 2: Pilot</td><td></td><td></td><td></td><td></td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--teal);border-radius:4px;opacity:0.7;"></div></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Stream A: Hot Prospects outreach</td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Stream B: Warm &rarr; Hot MQL nurture</td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Stream C: Lapsed/dormant reactivation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label" style="color:var(--teal);font-weight:700;">Phase 2: Pilot &mdash; Test &amp; Learn</td><td></td><td></td><td></td><td></td><td colspan="3" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--teal);border-radius:4px;opacity:0.7;"></div></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Select segments + configure Prospecting Agent</td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Launch AI email + Prospecting Agent + ads</td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Monitor + review results</td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--teal);border-radius:3px;opacity:0.5;"></div></td><td></td></tr>
 
-        <tr><td class="gantt-label" style="color:var(--green);font-weight:700;">Phase 3: Scale</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan="4" style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--green);border-radius:4px;opacity:0.7;"></div></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Roll out all segments + AI email</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--green);border-radius:3px;opacity:0.5;"></div></td><td></td><td></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Scale Prospecting Agent + Content Agent</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan="2" style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--green);border-radius:3px;opacity:0.5;"></div></td></tr>
-        <tr><td class="gantt-label">&nbsp;&nbsp;Reporting dashboard + ongoing enrichment</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--green);border-radius:3px;opacity:0.5;"></div></td></tr>
+        <tr><td class="gantt-label" style="color:var(--green);font-weight:700;">Phase 3: Scale</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:6px 4px;background:var(--green);border-radius:4px;opacity:0.7;"></div></td></tr>
+        <tr><td class="gantt-label">&nbsp;&nbsp;Roll out winning playbooks across all segments</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td style="position:relative;"><div style="position:absolute;inset:8px 4px;background:var(--green);border-radius:3px;opacity:0.5;"></div></td></tr>
       </tbody>
     </table>
   </div>
